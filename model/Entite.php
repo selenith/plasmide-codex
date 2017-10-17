@@ -9,14 +9,10 @@ class Entite extends Archivable{
 	
 	public static function getDbPath(){
 		
-		if(preg_match("/codex\/controller/", $_SERVER['PHP_SELF'])){
-			return '../data/';
-		}else if(preg_match("/mods/", $_SERVER['PHP_SELF'])){
-			return '../../codex/data/';
-		}else if(preg_match("/index\.php/", $_SERVER['PHP_SELF'])){
-			return 'mods/codex/data/';
+		if(preg_match("/router\.php/", $_SERVER['PHP_SELF'])){
+			return 'data/';
 		}else {
-			return false;
+			return '../../../data/';
 		}
 		
 	}

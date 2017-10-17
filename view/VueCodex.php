@@ -45,12 +45,22 @@ class VueCodex{
 					<div class="codex">
 						<h1>Codex</h1>
 						<div class="alert alert-info" role="alert">Seul les membres authentifié peuvent acceder au codex.</div>			
-						<form method="post" action="/auth/connexion" class="text-center">
-							login : <br/>
-							<input type="text" id="login" name="login"> <br/><br/>
-							Password : <br/>
-							<input type="password" id="pass"  name="pass"><br/><br/>
-							<input type="submit" value="Connexion" class="btn btn-default" id="envoi">
+						<form method="post" action="/auth/connexion">
+                                                    <div class="form-group row justify-content-center">
+                                                         <label class="col-form-label col-2" for="login" >Login : </label>
+                                                         <div class="col-5">
+                                                              <input type="text" class="form-control"  id="login" name="login" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row justify-content-center">
+                                                         <label class="col-form-label col-2" for="pass" >Password : </label>
+                                                         <div class="col-5">
+                                                              <input type="password" class="form-control"  id="pass" name="pass" />
+                                                        </div>
+                                                    </div>
+                                                    <divv class="form-group d-flex justify-content-center">                                          
+                                                        <input type="submit" class="btn btn-primary" value="Connexion" id="envoi" />
+                                                    </div>  
 						</form>
 					</div>
 			';

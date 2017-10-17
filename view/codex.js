@@ -147,7 +147,7 @@ function Codex(){
 		//bouton retour
 		input = document.createElement('input');
 		input.type = 'button'
-		input.className = 'btn btn-default';
+		input.className = 'btn btn-primary';
 		input.value ='Retour';
 		element.appendChild(input);
 		
@@ -169,7 +169,7 @@ function Codex(){
 		//bouton valider
 		input = document.createElement('input');
 		input.type='button';
-		input.className = 'btn btn-default';
+		input.className = 'btn btn-primary';
 		input.value = 'Envoyer';
 		element.appendChild(input);
 		
@@ -223,7 +223,7 @@ function Codex(){
 				
 				input = document.createElement('input');
 				input.type = 'button';
-				input.className = 'btn btn-default';
+				input.className = 'btn btn-primary';
 				input.value ='Supprimer';
 				element.appendChild(input);
 				
@@ -236,7 +236,7 @@ function Codex(){
 				
 				input = document.createElement('input');
 				input.type = 'button';
-				input.className = 'btn btn-default';
+				input.className = 'btn btn-primary';
 				input.value ='Editer';
 				element.appendChild(input);
 				
@@ -293,14 +293,14 @@ function Codex(){
 			conteneurPage.append(divStyle);
 			
 			var div = document.createElement('div');
-			div.className='row';
+			div.className='d-flex flex-wrap justify-content-between';
 			divStyle.appendChild(div);
 			
 			
 			
 			
 			element = document.createElement("div");
-			element.className = "col-sm-4 col-xs-12";
+			element.className = "col-12 col-sm-4";
 			div.appendChild(element);
 			
 		
@@ -320,31 +320,31 @@ function Codex(){
 			champ.setAttribute('autofocus', 'autofocus');
 			form.appendChild(champ);
 		
-		
+	/*	
 			element = document.createElement("div");
 			element.className = "clearfix visible-xs-block";
 			div.appendChild(element);
 		
 			element = document.createElement("div");
 			div.appendChild(element);
-			element.className = "col-sm-offset-1 col-sm-4 col-xs-6";
-		
+			element.className = "col-sm-4 col-xs-6";
+	*/	
 			input = document.createElement("a");
-			input.className='btn btn-default'
+			input.className='btn btn-primary';
 			input.href = '#creer';
-			element.appendChild(input);
+			div.appendChild(input);
 			input.appendChild(document.createTextNode("Creer une page"));
 		
-					 
+	/*				 
 			element = document.createElement("div");
 			element.className = "col-sm-3 col-xs-6 text-right";
 			element.id = "zoneUser";
 			div.appendChild(element);
-		
+	*/	
 			input = document.createElement("a");
-			input.href = './?mod=auth&action=deconnexion';
-			input.className="btn btn-default"
-			element.appendChild(input);
+			input.href = '/auth/deconnexion';
+			input.className="btn btn-outline-primary";
+			div.appendChild(input);
 			input.appendChild(document.createTextNode("Deconnexion"));
 			
 			
