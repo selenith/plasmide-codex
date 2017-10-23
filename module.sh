@@ -89,6 +89,7 @@ update(){
 
         echo -e Nettoyage des fichiers temporaires
         rm -rf update
+	rm $sourceFile
         echo -e $vertclair'Mise a jour du module '$modName' terminée.'$neutre
     fi
 }
@@ -120,6 +121,7 @@ install(){
         
     echo -e Nettoyage des fichiers temporaires
     rm -rf install
+    rm $sourceFile
     echo -e $vertclair'installation du module '$modName' terminée.'$neutre
 }
 
